@@ -38,14 +38,13 @@ class Item < ApplicationRecord
     return item_array
   end
 
-  def self.no_user_items(items)
+  def self.no_user_items(items, user)
     item_array = []
-    user = user
+    current_user = user
 
-    if user != nil
-      user = user
+    if current_user != nil
       items.each do |item|
-        if item.user_id != user.id
+        if item.user_id != current_user.id
           item_array.push(item)
         end
       end

@@ -8,14 +8,14 @@ class Api::V1::ItemsController < ApiController
           if search_results.length == 0
             items = search_results
           else
-            items = Item.no_user_items(search_results).reverse
+            items = Item.no_user_items(search_results, current_user).reverse
             items = Item.items_pending(items)
           end
         else
-          items = Item.no_user_items(search_results).reverse
+          items = Item.no_user_items(search_results, current_user).reverse
           items = Item.items_pending(items)
         end
-        items = Item.no_user_items(search_results).reverse
+        items = Item.no_user_items(search_results, current_user).reverse
         items = Item.items_pending(items)
       else
         if current_user
@@ -57,7 +57,7 @@ class Api::V1::ItemsController < ApiController
         end
       else
         items = Item.where({ category: params["click"] })
-        items = Item.no_user_items(items).reverse
+        items = Item.no_user_items(items, current_user).reverse
         items = Item.items_pending(items)
       end
 

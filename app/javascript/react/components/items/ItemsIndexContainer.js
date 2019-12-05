@@ -3,6 +3,7 @@ import _ from "lodash"
 import ItemIndexTile from './ItemIndexTile'
 import WelcomeTile from './WelcomeTile'
 import ItemForm from './ItemForm'
+import ItemsFilterTile from './ItemsFilterTile'
 
 const ItemsIndexContainer = props => {
   const [items, setItems] = useState([])
@@ -248,22 +249,13 @@ const ItemsIndexContainer = props => {
                   </div>
               </div>
               <div className="row">
-                  <div className="col-md-12">
-                      <ul className="gallery-filter list-unstyled list-inline text-center">
-                          <li className={`list-inline-item ${active.newActive}`} id="newest" onClick={newClick}>
-                            Newest
-                          </li>
-                          <li className={`list-inline-item ${active.boardActive}`} id="board games" onClick={boardClick}>
-                            Board Games
-                          </li>
-                          <li className={`list-inline-item ${active.collectActive}`} id="collectibles" onClick={collectClick}>
-                            Collectibles
-                          </li>
-                          <li className={`list-inline-item ${active.videoActive}`} id="video games" onClick={videoClick}>
-                            Video Games
-                          </li>
-                      </ul>
-                  </div>
+                <ItemsFilterTile
+                  newClick={newClick}
+                  boardClick={boardClick}
+                  collectClick={collectClick}
+                  videoClick={videoClick}
+                  active={active}
+                />
               </div>
               <div className="row">
                 <div className="col-md-12">
