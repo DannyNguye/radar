@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import _ from "lodash"
 import ItemIndexTile from './ItemIndexTile'
-import WelcomeTile from './WelcomeTile'
+import WelcomeTile from '../users/WelcomeTile'
 import ItemForm from './ItemForm'
 import ItemsFilterTile from './ItemsFilterTile'
 

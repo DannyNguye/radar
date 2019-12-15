@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApiController
+  before_action :authenticate_user!, except: [:index]
+
   def index
     if current_user
       user = current_user
@@ -20,5 +22,9 @@ class Api::V1::UsersController < ApiController
       logged_in: logged_in,
       offers: offers
     }
+  end
+
+  def show
+
   end
 end

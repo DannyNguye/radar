@@ -48,15 +48,15 @@
                             <% if current_user %>
                               <% @items.each do |item| %>
                               <div class="cart-content d-flex flex-row justify-content-between">
-                                      <% if item.offered_item != nil %>
-                                        <div class="cart-img">
-                                          <a href="/items/<%= item.offered_item.id %>"><img src=<%= item.offered_item.photo.url %> class="img-fluid"></a>
-                                        </div>
-                                        <div class="cart-disc">
-                                        <h6><a href="/items/<%= item.offered_item.id %>"><%= item.offered_item.title %></a></h6>
-                                        <h5>Status: <%= item.offered_for_trade.status %> </h5>
-                                        </div>
-                                      <% end %>
+                                  <% if item.offered_item != nil %>
+                                    <div class="cart-img">
+                                      <a href="/items/<%= item.offered_item.id %>"><img src=<%= item.offered_item.photo.url %> class="img-fluid"></a>
+                                    </div>
+                                    <div class="cart-disc">
+                                    <h6><a href="/items/<%= item.offered_item.id %>"><%= item.offered_item.title %></a></h6>
+                                    <h5>Status: <%= item.offered_for_trade.status %> </h5>
+                                    </div>
+                                  <% end %>
                               </div>
                               <% end %>
                             <% else %>
