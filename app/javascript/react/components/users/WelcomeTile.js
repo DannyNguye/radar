@@ -14,17 +14,17 @@ const WelcomeTile = props => {
         <div className="row">
             <div className="col-md-4">
                 <div className="counter-number">
-                    <h5 className="welcome-text"><span className="counter">{props.items.length}</span> Total Items</h5>
+                    <h5 id="itemsLength" className="welcome-text"><span className="counter">{props.items.length}</span> Total Items</h5>
                 </div>
             </div>
             <div className="col-md-4">
                 <div className="counter-number">
-                    <h5 className="welcome-text"><span className="counter">{props.itemsNear.length}</span> Items Near You</h5>
+                    <h5 id="itemsNearLength" className="welcome-text"><span className="counter">{props.itemsNear.length}</span> Items Near You</h5>
                 </div>
             </div>
             <div className="col-md-4">
                 <div className="counter-number">
-                    <h5 className="welcome-text"><span className="counter">{props.offers.length}</span> Items Swapped</h5>
+                    <h5 id="offersLength" className="welcome-text"><span className="counter">{props.offers.length}</span> Items Swapped</h5>
                 </div>
             </div>
         </div>
