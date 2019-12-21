@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import _ from "lodash"
 import ItemIndexTile from './ItemIndexTile'
-import WelcomeTile from '../users/WelcomeTile'
+import WelcomeContainer from '../users/WelcomeContainer'
 import ItemForm from './ItemForm'
 import ItemsFilterTile from './ItemsFilterTile'
 
@@ -237,7 +237,7 @@ const ItemsIndexContainer = props => {
         />
       </div>
       <div>
-        <WelcomeTile />
+        <WelcomeContainer />
       </div>
       <section className="gallery-box">
           <div className="container">
