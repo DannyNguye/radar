@@ -58,4 +58,4 @@ gem "carrierwave"
 gem 'fog-aws'
 gem "font-awesome-rails"
 
-gem "geocoder", "~> 1.5"
+gem "geocoder", "~> 1.6"
